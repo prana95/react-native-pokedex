@@ -48,3 +48,9 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+## Remarque
+npm run reset-project pour mettre le boiler template dans app-exemple dossier mais ca fonctionne pas
+
+npm run start to run the project and should press a for android but before that you have to open the AVD (Android virtual device) for the bundle of this application to be loaded on the AVD
