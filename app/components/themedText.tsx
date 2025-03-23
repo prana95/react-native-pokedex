@@ -55,8 +55,8 @@ type Props = TextProps &{ // The Props type extends TextProps from react-native.
 
 
 
-export default function ThemedText({variant,color,...rest}:Props) {
+export default function ThemedText({variant,color, style,...rest}:Props) {
     const colors = useThemedColors();
-    return <Text style={[styles[variant ?? 'body3'],{color:colors[color ?? "grayDark"]}] } {...rest}></Text>; // variant ?? 'body3' it means if the the variant value is null or undefined the defaut value  of variant will be 'body3'
+    return <Text style={[styles[variant ?? 'body3'],{color:colors[color ?? "grayDark"]},style] } {...rest}></Text>; // variant ?? 'body3' it means if the the variant value is null or undefined the defaut value  of variant will be 'body3'
 }
 
