@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import ThemedText from "./components/themedText";
 import { useThemedColors } from "./hooks/useThemedColors";
 import Card  from "./components/Card";
+import PokemonCard  from "./components/pokemon/PokemonCard";
 
 export default function Index() {
   const colors = useThemedColors()
@@ -25,9 +26,8 @@ export default function Index() {
           contentContainerStyle={[styles.gridGap,styles.list]}//contentContainerStyle is a style that is applied to the container of the list. In this case, we are adding a gap between items in the list. For vertical gaps. And we can use styles.gridGap without array also but we are adding other style so we are using array
           columnWrapperStyle={styles.gridGap}//columnWrapperStyle is a style that is applied to the container of each column. In this case, we are adding a gap between columns. For horizontal gaps
           renderItem={({item})=>
-            <Card style={{flex:1/3,height:200}}>
-              <Text>{item.name}</Text>
-            </Card>
+            <PokemonCard id={item.id} name={item.name} style={{flex:1/3}}/>
+              
           }//renderItem is a function that takes an item and returns a React element to render that item. In this case, we are rendering a Card component for each item in the list.
           keyExtractor={(item) => item.id.toString()}
           // keyExtractor is a function that takes an item and returns a unique key for that item. This is used by React to keep track of items in the list and to optimize rendering performance.
